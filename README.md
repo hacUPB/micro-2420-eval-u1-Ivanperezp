@@ -1,13 +1,13 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/EID3BRwM)
 # Unidad 1
-## Conceptos generales de procesadores (extraído de ChatGPT)
+## Conceptos generales de procesadores 
 
 
 ### 1. CPU (Central Processing Unit)
-- **Concepto**: La CPU es el cerebro del ordenador donde se realizan la mayoría de los cálculos. Ejecuta instrucciones del programa mediante el proceso de búsqueda, decodificación y ejecución.
+-  La CPU es el cerebro del ordenador donde se realizan la mayoría de los cálculos. Ejecuta instrucciones del programa mediante el proceso de búsqueda, decodificación y ejecución.
 
-## 2. ALU (Arithmetic Logic Unit)
-- **Concepto**: La ALU es una parte de la CPU que se encarga de realizar operaciones aritméticas (suma, resta, etc.) y lógicas (AND, OR, NOT).
+### 2. ALU (Arithmetic Logic Unit)
+-  La ALU es una parte de la CPU que se encarga de realizar operaciones aritméticas (suma, resta, etc.) y lógicas (AND, OR, NOT).
 
 ## 3. Registros
 ### a. De propósito general
@@ -31,3 +31,7 @@
 ### 7. Opcode
  Un opcode (código de operación) es una parte de una instrucción de máquina que especifica la operación que debe realizarse. Es fundamental para la ejecución de instrucciones por parte de la CPU.
 
+## Funcionamiento de la simulación 16 bits
+El pc cuenta con una arquitectura Harvard, esto debido a que tiene dos memorias ubicadas en diferente sitio. Una destinada para las instrucciones y otra para los datos. En este caso específico la memoria ROM almacena el programa a ejecutarse, esta cuenta con dos registros, D y A. a través del registro D se transmiten las instrucciones. La CPU se encarga de los procesos de fetch, decode and execute. el bloque memory se encarga de almacenar los datos. 
+
+![CPU 16 bits](https://www.google.com/url?sa=i&url=https%3A%2F%2Fhackaday.io%2Fproject%2F174192-simple-16-bit-computer&psig=AOvVaw1kVjXM_QaAREYIMGEThZPM&ust=1721939359297000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPiXvJHCwIcDFQAAAAAdAAAAABAE)
