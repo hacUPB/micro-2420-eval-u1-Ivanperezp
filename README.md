@@ -35,3 +35,11 @@
 El pc cuenta con una arquitectura Harvard, esto debido a que tiene dos memorias ubicadas en diferente sitio. Una destinada para las instrucciones y otra para los datos. En este caso específico la memoria ROM almacena el programa a ejecutarse, esta cuenta con dos registros, D y A. a través del registro D se transmiten las instrucciones. La CPU se encarga de los procesos de fetch, decode and execute. el bloque memory se encarga de almacenar los datos. 
 
 ![CPU 16 bits](https://www.google.com/url?sa=i&url=https%3A%2F%2Fhackaday.io%2Fproject%2F174192-simple-16-bit-computer&psig=AOvVaw1kVjXM_QaAREYIMGEThZPM&ust=1721939359297000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPiXvJHCwIcDFQAAAAAdAAAAABAE)
+
+## Fetch-decode-execute
+Estas palabras resumen el funcionamiento básico de una CPU. Por ejemplo en la computadora de 16 bits la CPU primero tiene que buscar la dirección de la instrucción en el registro A dictada por el registro pc. Luego la CPU decodifica la instrucción, finalmente la envía para su ejecución a través del registro D. 
+
+## Resumen de las instrucciones
+
+En este ejemplo existen dos tipos de instrucciones: A y C. La instrucción tipo A viene dictada por el registro PC y se encarga de escribir en el registro A la dirección de la memoria en la cual se encuentra la instrucción para que luego el contenido sea mostrado en el registro D. Las instrucciones tipo A tienen su bit más significativo siempre en 0. Por ejemplo la instrucción 0x4000, la cual guarda en el registro A el número 0x4000. Por otro lado la instrucción tipo C está compuesto de tres partes, un encabezado conformado por los tres primeros bits, los cuales siempre estarán en 1. Luego vienen 7 bits que determinan la operación a realizar, siguiendo la forma *destino=operación*. Por ejemplo D=A, que almacena en D la información que se encuentra en el registro A. Finalmente los últimos tres bits se encargan de modificar el flujo del programa, también conocidos como saltos. Si no existiera la posibilidad de modificar el flujo del programa no tendría sentido el uso del registro PC, pues el programa se ejecutaría de manera secuencial. En resumen, el registro C sigue la forma:
+*111destino=operación;salto*  
